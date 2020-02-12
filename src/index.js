@@ -6,6 +6,7 @@ import flattenDeep from 'lodash/flattenDeep';
 import cloneDeep from 'lodash/cloneDeep';
 import forEach from 'lodash/forEach';
 import split from 'lodash/split';
+
 import GICSOriginal from './GICS';
 
 const GICS = cloneDeep(GICSOriginal);
@@ -111,7 +112,6 @@ class IndustryClassificationSelector extends Component {
   handleOnChange = v => {
     const { onChange } = this.props;
     if (onChange) {
-      console.log(this.formatValue(v));
       onChange(this.formatValue(v));
     }
   };
