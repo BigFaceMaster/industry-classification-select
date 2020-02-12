@@ -2,7 +2,7 @@
   "name": "industry-classification-select",
   "version": "1.0.0",
   "description": "GICS select",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:prettier",
     "lint:js": "eslint --ext .js,.jsx, --format=pretty ./src",
@@ -11,7 +11,8 @@
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js",
     "prettier": "prettier -c --write **/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "umi-lib build"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,19 @@
     "url": "https://github.com/BigFaceMaster/industry-classification-select/issues"
   },
   "homepage": "https://github.com/BigFaceMaster/industry-classification-select#readme",
+  "peerDependencies": {
+    "antd": "^3.0.1",
+    "react": "~0.14.0 || >=15.0.0 || >=16.0.0",
+    "react-dom": "~0.14.0 || >=15.0.0 || >= 16.0.0"
+  },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "7.7.4",
-    "@babel/runtime": "^7.7.4"
+    "@babel/runtime": "^7.7.4",
+    "antd": "^3.10.9",
+    "lodash": "^4.17.15",
+    "react": "^16.6.3",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
@@ -59,7 +69,10 @@
     "less": "^3.10.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.19.1",
-    "style-loader": "^1.1.2"
+    "prop-types": "^15.5.10",
+    "style-loader": "^1.1.2",
+    "umi": "^2.8.16",
+    "umi-library": "^1.6.0"
   },
   "husky": {
     "hooks": {
