@@ -1,0 +1,50 @@
+/package-lock.json
+dist/
+/.docz
+**/node_modules
+**/package-lock.json
+**/dist
+.idea
+**/yarn.lock
+/yarn.lock
+.eslintcache
+site/
+.npmrc
+.DS_Store
+/.vscode
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# roadhog-api-doc ignore
+/src/utils/request-temp.js
+_roadhog-api-doc
+
+# production
+/dist
+
+# misc
+npm-debug.log*
+yarn-error.log
+
+/coverage
+package-lock.json
+*bak
+jsconfig.json
+.vscode
+
+# visual studio code
+.history
+*.log
+
+functions/mock
+.temp/**
+
+# umi
+.umi
+.umi-production
+
+# screenshot
+screenshot
+yarn.lock
+docker-compose.yml
+public/

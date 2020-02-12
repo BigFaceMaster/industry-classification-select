@@ -1,0 +1,79 @@
+{
+  "name": "industry-classification-select",
+  "version": "1.0.0",
+  "description": "GICS select",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lint:js": "eslint --ext .js,.jsx, --format=pretty ./src",
+    "lint:fix": "npm run lint:js -- --fix",
+    "lint:prettier": "check-prettier lint",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js",
+    "prettier": "prettier -c --write **/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigFaceMaster/industry-classification-select.git"
+  },
+  "keywords": [
+    "CICS",
+    "Industry",
+    "Industry Classfication"
+  ],
+  "author": "BigFaceMaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigFaceMaster/industry-classification-select/issues"
+  },
+  "homepage": "https://github.com/BigFaceMaster/industry-classification-select#readme",
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "7.7.4",
+    "@babel/runtime": "^7.7.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@umijs/fabric": "^2.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-prismjs": "^2.0.1",
+    "check-prettier": "^1.0.3",
+    "eslint": "^6.7.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-compat": "^3.1.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-unicorn": "^8.0.1",
+    "husky": "^3.1.0",
+    "less": "^3.10.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,json,css,md}": [
+      "npm run prettier",
+      "git add"
+    ],
+    "**/*.{js}": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  }
+}
