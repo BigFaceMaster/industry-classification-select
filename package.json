@@ -1,6 +1,6 @@
 {
   "name": "industry-classification-select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GICS select",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
