@@ -1,8 +1,9 @@
 {
   "name": "industry-classification-select",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GICS select",
   "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:prettier",
     "lint:js": "eslint --ext .js,.jsx, --format=pretty ./src",
