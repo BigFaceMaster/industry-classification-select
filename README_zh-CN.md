@@ -16,6 +16,12 @@
 
 
 
+
+
+## [在线示例](https://codesandbox.io/s/strange-star-j3y5c)
+
+
+
 ## API
 
 
@@ -39,6 +45,7 @@ import IndustryClassificationSelect from 'industry-classification-select;
 | allowClear           | 是否支持清除                                                 | boolean                                                      | true                |
 | changeOnSelect       | 当此项为 true 时，点选每级菜单选项值都会发生变化，具体见上面的演示 | boolean                                                      | false               |
 | className            | 自定义类名                                                   | string                                                       | -                   |
+| zh                   | 是否显示中文                                                 | boolean                                                      | False               |
 | defaultValue         | 默认的选中项({   code: number;   en?: string;   zh?: string;   desc?: string;   desc_zh?: string; }) | object                                                       | -                   |
 | disabled             | 禁用                                                         | boolean                                                      | false               |
 | expandTrigger        | 次级菜单的展开方式，可选 'click' 和 'hover'                  | string                                                       | ‘click’             |

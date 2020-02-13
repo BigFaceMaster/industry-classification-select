@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 export interface IndustryClassificationSelectorProps {
+  zh?: boolean;
   /** 默认的选中项 */
   defaultValue?: {
     code: number;

@@ -7,6 +7,8 @@ import flattenDeep from 'lodash/flattenDeep';
 import cloneDeep from 'lodash/cloneDeep';
 import forEach from 'lodash/forEach';
 import split from 'lodash/split';
+import 'antd/es/cascader/style/index.css';
+import 'antd/es/input/style/index.css';
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {

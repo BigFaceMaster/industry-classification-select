@@ -16,6 +16,10 @@ When you need to select industry classification.
 
 
 
+## [Online Demo](https://codesandbox.io/s/strange-star-j3y5c)
+
+
+
 ## API
 
 
@@ -39,6 +43,7 @@ import IndustryClassificationSelect from 'industry-classification-select;
 | allowClear           | whether allow clear                                          | boolean                                                      | true                |
 | changeOnSelect       | change value on each selection if set to true, see above demo for details | boolean                                                      | false               |
 | className            | additional css class                                         | string                                                       | -                   |
+| zh                   | language zh or en                                            | boolean                                                      | false               |
 | defaultValue         | initial selected value({   code: number;   en?: string;   zh?: string;   desc?: string;   desc_zh?: string; }) | object                                                       | -                   |
 | disabled             | whether disabled select                                      | boolean                                                      | false               |
 | expandTrigger        | expand current item when click or hover, one of 'click' 'hover' | string                                                       | ‘click’             |

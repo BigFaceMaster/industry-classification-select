@@ -14,6 +14,8 @@ var flattenDeep = _interopDefault(require('lodash/flattenDeep'));
 var cloneDeep = _interopDefault(require('lodash/cloneDeep'));
 var forEach = _interopDefault(require('lodash/forEach'));
 var split = _interopDefault(require('lodash/split'));
+require('antd/es/cascader/style/index.css');
+require('antd/es/input/style/index.css');
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
