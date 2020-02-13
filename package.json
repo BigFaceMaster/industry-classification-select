@@ -1,6 +1,6 @@
 {
   "name": "industry-classification-select",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "GICS select",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
@@ -29,7 +29,7 @@
     "行业"
   ],
   "author": "BigFaceMaster",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BigFaceMaster/industry-classification-select/issues"
   },
