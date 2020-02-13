@@ -38,7 +38,7 @@ import IndustryClassificationSelect from 'industry-classification-select;
 
 
 
-| 参数                 | 说明                                                         | 类型                                                         | 默认值              |
+| Parameters                 | Desc                                                         | Type                                                         | Default              |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- |
 | allowClear           | whether allow clear                                          | boolean                                                      | true                |
 | changeOnSelect       | change value on each selection if set to true, see above demo for details | boolean                                                      | false               |
