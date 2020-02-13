@@ -53,12 +53,6 @@ export interface IndustryClassificationSelectorProps {
   inputPrefixCls?: string;
   getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
   popupVisible?: boolean;
-  /** use this after antd@3.7.0 */
-  fieldNames?: {
-    value?: string;
-    label?: string;
-    children?: string;
-  };
   suffixIcon?: React.ReactNode;
 }
 

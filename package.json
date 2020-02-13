@@ -1,6 +1,6 @@
 {
   "name": "industry-classification-select",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GICS select",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
@@ -22,7 +22,11 @@
   "keywords": [
     "CICS",
     "Industry",
-    "Industry Classfication"
+    "Industry Classfication",
+    "全球行业信息分类",
+    "行业信息",
+    "行业信息分类",
+    "行业"
   ],
   "author": "BigFaceMaster",
   "license": "ISC",
