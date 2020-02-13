@@ -16,7 +16,7 @@ When you need to select industry classification.
 
 
 
-## [Online Demo](https://codesandbox.io/s/strange-star-j3y5c)
+## [Online Demo](https://codesandbox.io/s/industry-classification-select-j3y5c)
 
 
 
