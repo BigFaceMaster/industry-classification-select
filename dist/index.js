@@ -1,43 +1,27 @@
 'use strict';
 
-function _interopDefault(ex) {
-  return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
-}
-
-require('antd/es/cascader/style');
-var _Cascader = _interopDefault(require('antd/es/cascader'));
 var React = require('react');
-var React__default = _interopDefault(React);
-var mapper = _interopDefault(require('lodash/map'));
-var last = _interopDefault(require('lodash/last'));
-var flattenDeep = _interopDefault(require('lodash/flattenDeep'));
-var cloneDeep = _interopDefault(require('lodash/cloneDeep'));
-var forEach = _interopDefault(require('lodash/forEach'));
-var split = _interopDefault(require('lodash/split'));
+var antd = require('antd');
+var mapper = require('lodash/map');
+var last = require('lodash/last');
+var flattenDeep = require('lodash/flattenDeep');
+var cloneDeep = require('lodash/cloneDeep');
+var forEach = require('lodash/forEach');
+var split = require('lodash/split');
 require('antd/es/cascader/style/index.css');
 require('antd/es/input/style/index.css');
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
+function _interopDefaultLegacy(e) {
+  return e && typeof e === 'object' && 'default' in e ? e : { default: e };
 }
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ('value' in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
+var React__default = /*#__PURE__*/ _interopDefaultLegacy(React);
+var mapper__default = /*#__PURE__*/ _interopDefaultLegacy(mapper);
+var last__default = /*#__PURE__*/ _interopDefaultLegacy(last);
+var flattenDeep__default = /*#__PURE__*/ _interopDefaultLegacy(flattenDeep);
+var cloneDeep__default = /*#__PURE__*/ _interopDefaultLegacy(cloneDeep);
+var forEach__default = /*#__PURE__*/ _interopDefaultLegacy(forEach);
+var split__default = /*#__PURE__*/ _interopDefaultLegacy(split);
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -52,26 +36,6 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
-}
-
-function _extends() {
-  _extends =
-    Object.assign ||
-    function(target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-
-      return target;
-    };
-
-  return _extends.apply(this, arguments);
 }
 
 function ownKeys(object, enumerableOnly) {
@@ -109,79 +73,91 @@ function _objectSpread2(target) {
   return target;
 }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== 'function' && superClass !== null) {
-    throw new TypeError('Super expression must either be null or a function');
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true,
-    },
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf
-    ? Object.getPrototypeOf
-    : function _getPrototypeOf(o) {
-        return o.__proto__ || Object.getPrototypeOf(o);
-      };
-  return _getPrototypeOf(o);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf =
-    Object.setPrototypeOf ||
-    function _setPrototypeOf(o, p) {
-      o.__proto__ = p;
-      return o;
-    };
-
-  return _setPrototypeOf(o, p);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (typeof call === 'object' || typeof call === 'function')) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
+function _slicedToArray(arr, i) {
+  return (
+    _arrayWithHoles(arr) ||
+    _iterableToArrayLimit(arr, i) ||
+    _unsupportedIterableToArray(arr, i) ||
+    _nonIterableRest()
+  );
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return (
+    _arrayWithoutHoles(arr) ||
+    _iterableToArray(arr) ||
+    _unsupportedIterableToArray(arr) ||
+    _nonIterableSpread()
+  );
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
-  }
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
 }
 
 function _iterableToArray(iter) {
-  if (
-    Symbol.iterator in Object(iter) ||
-    Object.prototype.toString.call(iter) === '[object Arguments]'
-  )
-    return Array.from(iter);
+  if (typeof Symbol !== 'undefined' && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === 'undefined' || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i['return'] != null) _i['return']();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === 'string') return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === 'Object' && o.constructor) n = o.constructor.name;
+  if (n === 'Map' || n === 'Set') return Array.from(o);
+  if (n === 'Arguments' || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+    return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
 }
 
 function _nonIterableSpread() {
-  throw new TypeError('Invalid attempt to spread non-iterable instance');
+  throw new TypeError(
+    'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+  );
+}
+
+function _nonIterableRest() {
+  throw new TypeError(
+    'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+  );
 }
 
 /**
@@ -2231,178 +2207,153 @@ var GICSOriginal = [
   },
 ];
 
-var GICS = cloneDeep(GICSOriginal);
+var IndustryClassificationSelector = function IndustryClassificationSelector(props) {
+  var GICS = cloneDeep__default['default'](GICSOriginal);
+  var cn = props.zh,
+    onChange = props.onChange,
+    value = props.value; // @ts-ignore
 
-var IndustryClassificationSelector =
-  /*#__PURE__*/
-  (function(_Component) {
-    _inherits(IndustryClassificationSelector, _Component);
+  var formatChildren = function formatChildren(item) {
+    var code = item.code,
+      en = item.en,
+      zh = item.zh,
+      children = item.children;
+    return _objectSpread2(
+      _objectSpread2({}, item),
+      {},
+      {
+        value: code,
+        label: cn ? zh : en,
+        children: children
+          ? mapper__default['default'](children, function(subItem) {
+              return formatChildren(subItem);
+            })
+          : undefined,
+      },
+    );
+  };
 
-    function IndustryClassificationSelector(props, context) {
-      var _this;
-
-      _classCallCheck(this, IndustryClassificationSelector);
-
-      _this = _possibleConstructorReturn(
-        this,
-        _getPrototypeOf(IndustryClassificationSelector).call(this, props, context),
-      );
-
-      _this.formatIndustry = function() {
-        var cn = _this.props.zh;
-        return mapper(GICS, function(value) {
-          var code = value.code,
-            en = value.en,
-            zh = value.zh,
-            children = value.children;
-          return _objectSpread2({}, value, {
-            value: code,
-            label: cn ? zh : en,
-            children: children
-              ? mapper(children, function(item) {
-                  return _this.formatChildren(item);
-                })
-              : undefined,
-          });
-        });
-      };
-
-      _this.formatChildren = function(item) {
-        var cn = _this.props.zh;
-        var code = item.code,
-          en = item.en,
-          zh = item.zh,
-          children = item.children;
-        return _objectSpread2({}, item, {
+  var formatIndustry = function formatIndustry() {
+    return mapper__default['default'](GICS, function(value) {
+      var code = value.code,
+        en = value.en,
+        zh = value.zh,
+        children = value.children;
+      return _objectSpread2(
+        _objectSpread2({}, value),
+        {},
+        {
           value: code,
           label: cn ? zh : en,
           children: children
-            ? mapper(children, function(subItem) {
-                return _this.formatChildren(subItem);
+            ? mapper__default['default'](children, function(item) {
+                return formatChildren(item);
               })
             : undefined,
-        });
+        },
+      );
+    });
+  };
+
+  var formatValue = function formatValue(v) {
+    if (v && v.length > 0) {
+      var allGICS = flattenDeep__default['default'](
+        mapper__default['default'](GICS, function(item) {
+          var children = item.children;
+
+          if (children) {
+            return [_objectSpread2({}, item)].concat(
+              _toConsumableArray(
+                mapper__default['default'](children, function(subItem) {
+                  return reverseGICS(subItem);
+                }),
+              ),
+            );
+          }
+
+          return _objectSpread2({}, item);
+        }),
+      );
+      var realKey = last__default['default'](v); // @ts-ignore
+
+      var realValue =
+        allGICS.find(function(_ref) {
+          var code = _ref.code;
+          return code === realKey;
+        }) || {}; // @ts-ignore
+
+      var code = realValue.code,
+        en = realValue.en,
+        zh = realValue.zh,
+        desc = realValue.desc,
+        descZH = realValue.desc_zh;
+      return {
+        code: code,
+        en: en,
+        zh: zh,
+        desc: desc,
+        desc_zh: descZH,
       };
-
-      _this.formatValue = function(v) {
-        if (v && v.length > 0) {
-          var allGICS = flattenDeep(
-            mapper(GICS, function(item) {
-              var children = item.children;
-
-              if (children) {
-                return [_objectSpread2({}, item)].concat(
-                  _toConsumableArray(
-                    mapper(children, function(subItem) {
-                      return _this.reverseGICS(subItem);
-                    }),
-                  ),
-                );
-              }
-
-              return _objectSpread2({}, item);
-            }),
-          );
-          var realKey = last(v);
-          var realValue =
-            allGICS.find(function(_ref) {
-              var code = _ref.code;
-              return code === realKey;
-            }) || {};
-          var code = realValue.code,
-            en = realValue.en,
-            zh = realValue.zh,
-            desc = realValue.desc,
-            descZH = realValue.desc_zh;
-          return {
-            code: code,
-            en: en,
-            zh: zh,
-            desc: desc,
-            desc_zh: descZH,
-          };
-        }
-
-        return [];
-      };
-
-      _this.reverseGICS = function(item) {
-        var children = item.children;
-
-        if (children) {
-          return [_objectSpread2({}, item)].concat(
-            _toConsumableArray(
-              mapper(children, function(subItem) {
-                return _this.reverseGICS(subItem);
-              }),
-            ),
-          );
-        }
-
-        return _objectSpread2({}, item);
-      };
-
-      _this.handleOnChange = function(v) {
-        var onChange = _this.props.onChange;
-
-        if (onChange) {
-          onChange(_this.formatValue(v));
-        }
-      };
-
-      _this.state = {
-        opts: _this.formatIndustry(),
-      };
-      return _this;
     }
 
-    _createClass(
-      IndustryClassificationSelector,
-      [
-        {
-          key: 'render',
-          value: function render() {
-            var _this$state = this.state,
-              opts = _this$state.opts,
-              cascaderValue = _this$state.cascaderValue;
-            return React__default.createElement(
-              _Cascader,
-              _extends({}, this.props, {
-                value: cascaderValue,
-                options: opts,
-                onChange: this.handleOnChange,
-              }),
-            );
-          },
-        },
-      ],
-      [
-        {
-          key: 'getDerivedStateFromProps',
-          value: function getDerivedStateFromProps(props, state) {
-            var _props$value = props.value,
-              value = _props$value === void 0 ? {} : _props$value;
+    return [];
+  }; // @ts-ignore
 
-            if (value) {
-              var code = value.code;
-              var targetValue = [];
-              forEach(split(code, ''), function(v, k) {
-                if (k > 0 && k % 2 === 1) {
-                  targetValue.push(Number(''.concat(code).slice(0, k + 1)));
-                }
-              });
-              return _objectSpread2({}, state, {
-                cascaderValue: code ? targetValue : [],
-              });
-            }
+  var reverseGICS = function reverseGICS(item) {
+    var children = item.children;
 
-            return state;
-          },
-        },
-      ],
-    );
+    if (children) {
+      return [_objectSpread2({}, item)].concat(
+        _toConsumableArray(
+          mapper__default['default'](children, function(subItem) {
+            return reverseGICS(subItem);
+          }),
+        ),
+      );
+    }
 
-    return IndustryClassificationSelector;
-  })(React.Component);
+    return _objectSpread2({}, item);
+  };
+
+  var handleOnChange = function handleOnChange(v) {
+    if (onChange) {
+      onChange(formatValue(v));
+    }
+  };
+
+  var opts = formatIndustry();
+
+  var _useState = React.useState([]),
+    _useState2 = _slicedToArray(_useState, 2),
+    cascaderValue = _useState2[0],
+    setCascaderValue = _useState2[1];
+
+  React.useEffect(
+    function() {
+      if (value) {
+        var code = value.code;
+        var targetValue = []; // @ts-ignore
+
+        forEach__default['default'](split__default['default'](code, ''), function(v, k) {
+          if (k > 0 && k % 2 === 1) {
+            targetValue.push(Number(''.concat(code).slice(0, k + 1)));
+          }
+        }); // @ts-ignore
+
+        setCascaderValue(code ? targetValue : []);
+      }
+    },
+    [value],
+  ); // @ts-ignore
+
+  return /*#__PURE__*/ React__default['default'].createElement(
+    antd.Cascader,
+    Object.assign({}, props, {
+      value: cascaderValue,
+      options: opts,
+      onChange: handleOnChange,
+    }),
+  );
+};
 
 module.exports = IndustryClassificationSelector;

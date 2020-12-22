@@ -4,7 +4,7 @@ English| [简体中文](./README_zh-CN.md)
 
 # industry-classification-select
 
-> This is base on  [GICS](https://www.msci.com/gics), and used [ant-design Cascader](https://ant.design/components/cascader/)
+> This is base on  [GICS](https://www.msci.com/gics), and used [ant-design v4 Cascader](https://ant.design/components/cascader/)
 
 
 

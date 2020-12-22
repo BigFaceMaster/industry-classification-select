@@ -1,18 +1,9 @@
-const fabric = require('@umijs/fabric');
-
 module.exports = {
-  ...fabric.eslint,
+  extends: [require.resolve('@umijs/fabric/dist/eslint')],
   rules: {
-    ...fabric.eslint.rules,
-    '@typescript-eslint/prefer-interface': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    'no-return-assign': 0,
-    'no-console': 0,
-    'max-len': ['error', { code: 120, ignoreComments: true, ignoreStrings: true }],
-    // see https://github.com/prettier/prettier/issues/3847
-    'space-before-function-paren': [
-      'error',
-      { anonymous: 'never', named: 'never', asyncArrow: 'always' },
-    ],
+    'no-shadow': 0,
+    'class-methods-use-this': 0,
+    'no-useless-constructor': 0,
+    'no-underscore-dangle': 0,
   },
 };

@@ -4,7 +4,7 @@
 
 # industry-classification-select 行业信息分类选择器
 
-> 根据 [GICS](https://www.msci.com/gics) 全球行业信息分类整理，使用 [ant-design Cascader](https://ant.design/components/cascader-cn)封装成全球行业信息分类选择器。
+> 根据 [GICS](https://www.msci.com/gics) 全球行业信息分类整理，使用 [ant-design v4 Cascader](https://ant.design/components/cascader-cn)封装成全球行业信息分类选择器。
 
 
 
